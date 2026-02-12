@@ -31,45 +31,6 @@ A premium, cinematic Valentine's Day proposal web app with real-time Firebase tr
 
 Open `js/firebase-config.js` and replace the placeholder config:
 
-```javascript
-const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  databaseURL: "https://YOUR_PROJECT_ID-default-rtdb.firebaseio.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
-};
-```
-
-### 3. Set Up Database Rules (Optional)
-
-For production, update your Firebase Realtime Database rules:
-
-```json
-{
-  "rules": {
-    "proposals": {
-      "$proposalId": {
-        ".read": true,
-        ".write": "!data.exists() || data.child('status').val() !== 'accepted'"
-      }
-    }
-  }
-}
-```
-
-### 4. Deploy
-
-You can deploy this app to any static hosting service:
-
-- **Firebase Hosting**: `firebase deploy`
-- **Netlify**: Drag & drop the folder
-- **Vercel**: `vercel deploy`
-- **GitHub Pages**: Push to a gh-pages branch
-
-Or simply open `index.html` in your browser for local testing.
 
 ## 📁 Project Structure
 
