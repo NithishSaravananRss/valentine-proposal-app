@@ -1,0 +1,43 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    
+    "proposals": {
+      ".read": true,
+      
+      "$proposalId": {
+        ".read": true,
+        
+        ".write": "!data.exists() || (data.exists() && newData.exists())",
+        
+        ".validate": "$proposalId.length >= 10 && $proposalId.matches(/^val_[a-zA-Z0-9_-]+$/)",
+        
+        "proposerName": {
+          ".validate": "newData.isString() && newData.val().length >= 1 && newData.val().length <= 30"
+        },
+        "proposerGender": {
+          ".validate": "newData.isString() && (newData.val() === 'male' || newData.val() === 'female')"
+        },
+        "partnerName": {
+          ".validate": "newData.isString() && newData.val().length >= 1 && newData.val().length <= 30"
+        },
+        "partnerGender": {
+          ".validate": "newData.isString() && (newData.val() === 'male' || newData.val() === 'female')"
+        },
+        "status": {
+          ".validate": "newData.isString() && (newData.val() === 'pending' || newData.val() === 'opened' || newData.val() === 'accepted')"
+        },
+        "createdAt": {
+          ".validate": "newData.isNumber()"
+        },
+        "openedAt": {
+          ".validate": "newData.isNumber() || newData.val() === null"
+        },
+        "acceptedAt": {
+          ".validate": "newData.isNumber() || newData.val() === null"
+        }
+      }
+    }
+  }
+}

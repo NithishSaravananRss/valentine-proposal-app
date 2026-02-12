@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine Proposal 💕 Create Your Surprise</title>
+  
+  <!-- Meta Tags -->
+  <meta name="description" content="Create a romantic Valentine's Day proposal and surprise your special someone">
+  <meta name="theme-color" content="#1a0a15">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/themes.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💕</text></svg>">
+</head>
+<body class="theme-home">
+  <!-- Particles Background -->
+  <div id="particles-js"></div>
+  
+  <!-- Main Content -->
+  <div class="app-container">
+    <div class="glass-card" id="createForm">
+      <h1 class="title">Valentine Proposal</h1>
+      <p class="subtitle">Create your romantic surprise</p>
+      
+      <form id="proposalForm">
+        <!-- Your Name -->
+        <div class="form-group">
+          <label class="form-label" for="proposerName">Your Name</label>
+          <input type="text" id="proposerName" class="form-input" placeholder="Enter your name" required autocomplete="off">
+        </div>
+        
+        <!-- Your Gender -->
+        <div class="form-group">
+          <label class="form-label">You are</label>
+          <div class="gender-select">
+            <div class="gender-option">
+              <input type="radio" id="genderMale" name="proposerGender" value="male" required>
+              <label for="genderMale">
+                <span class="gender-icon">👨</span>
+                <span>Him</span>
+              </label>
+            </div>
+            <div class="gender-option">
+              <input type="radio" id="genderFemale" name="proposerGender" value="female">
+              <label for="genderFemale">
+                <span class="gender-icon">👩</span>
+                <span>Her</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Partner Name -->
+        <div class="form-group">
+          <label class="form-label" for="partnerName">Your Valentine's Name</label>
+          <input type="text" id="partnerName" class="form-input" placeholder="Enter their name" required autocomplete="off">
+        </div>
+        
+        <!-- Partner Gender -->
+        <div class="form-group">
+          <label class="form-label">They are</label>
+          <div class="gender-select">
+            <div class="gender-option">
+              <input type="radio" id="partnerMale" name="partnerGender" value="male" required>
+              <label for="partnerMale">
+                <span class="gender-icon">👨</span>
+                <span>Him</span>
+              </label>
+            </div>
+            <div class="gender-option">
+              <input type="radio" id="partnerFemale" name="partnerGender" value="female">
+              <label for="partnerFemale">
+                <span class="gender-icon">👩</span>
+                <span>Her</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary btn-block" id="createBtn">
+          Create Proposal 💕
+        </button>
+      </form>
+    </div>
+    
+    <!-- Success State - Links Generated -->
+    <div class="glass-card success-container" id="successCard">
+      <h1 class="title">✨ Proposal Created!</h1>
+      <p class="subtitle">Send the magic link to your Valentine</p>
+      
+      <div class="link-display">
+        <div class="link-label">💌 Send this link to your Valentine</div>
+        <div class="link-url">
+          <input type="text" id="proposalLinkInput" readonly>
+          <button type="button" class="btn-copy" data-target="proposalLinkInput">Copy</button>
+        </div>
+      </div>
+      
+      <div class="link-display">
+        <div class="link-label">👀 Track their response here</div>
+        <div class="link-url">
+          <input type="text" id="trackingLinkInput" readonly>
+          <button type="button" class="btn-copy" data-target="trackingLinkInput">Copy</button>
+        </div>
+      </div>
+      
+      <button type="button" class="btn btn-primary btn-block" id="openTrackingBtn" style="margin-top: 2rem;">
+        Open Tracking Page 📊
+      </button>
+      
+      <button type="button" class="btn btn-block" id="createAnotherBtn" style="margin-top: 1rem; background: transparent; border: 1px solid var(--glass-border);">
+        Create Another Proposal
+      </button>
+    </div>
+  </div>
+  
+  <!-- External Libraries -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  
+  <!-- App Module -->
+  <script type="module" src="js/home.js"></script>
+</body>
+</html>
