@@ -18,6 +18,160 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/themes.css">
   
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Creator Section Styles -->
+  <style>
+    .creator-section {
+      margin-top: 3rem;
+      width: 100%;
+      max-width: 500px;
+    }
+    
+    .creator-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(100, 150, 255, 0.15);
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2),
+                  inset 0 0 30px rgba(100, 150, 255, 0.03);
+    }
+    
+    .creator-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-light);
+      margin-bottom: 0.5rem;
+    }
+    
+    .creator-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      font-style: italic;
+    }
+    
+    .creator-services {
+      text-align: left;
+      padding: 0 1rem;
+      margin-bottom: 1.25rem;
+    }
+    
+    .creator-services-intro {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    
+    .creator-services ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.35rem;
+    }
+    
+    .creator-services li {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.75);
+      padding-left: 1rem;
+      position: relative;
+    }
+    
+    .creator-services li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #4a9eff;
+    }
+    
+    .creator-tagline {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 1.25rem;
+      font-style: italic;
+    }
+    
+    .creator-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    
+    .creator-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.25rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(100, 150, 255, 0.1);
+    }
+    
+    .creator-link:hover {
+      transform: scale(1.1);
+      background: rgba(74, 158, 255, 0.15);
+      color: #4a9eff;
+      box-shadow: 0 0 20px rgba(74, 158, 255, 0.3),
+                  0 0 40px rgba(74, 158, 255, 0.1);
+      border-color: rgba(74, 158, 255, 0.3);
+    }
+    
+    @media (max-width: 768px) {
+      .creator-section {
+        margin-top: 2rem;
+      }
+      
+      .creator-card {
+        padding: 1.5rem 1.25rem;
+        border-radius: 16px;
+      }
+      
+      .creator-title {
+        font-size: 1.1rem;
+      }
+      
+      .creator-services ul {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .creator-card {
+        padding: 1.25rem 1rem;
+      }
+      
+      .creator-title {
+        font-size: 1rem;
+      }
+      
+      .creator-subtitle {
+        font-size: 0.85rem;
+      }
+      
+      .creator-services li {
+        font-size: 0.75rem;
+      }
+      
+      .creator-link {
+        width: 42px;
+        height: 42px;
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+  
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💕</text></svg>">
 </head>
@@ -121,6 +275,36 @@
       <button type="button" class="btn btn-block" id="createAnotherBtn" style="margin-top: 1rem; background: transparent; border: 1px solid var(--glass-border);">
         Create Another Proposal
       </button>
+    </div>
+    
+    <!-- Creator Section -->
+    <div class="creator-section">
+      <div class="creator-card">
+        <div class="creator-title">Made with 💙 by Nithish Saravanan</div>
+        <div class="creator-subtitle">Interactive Tech Projects & Digital Experiences</div>
+        
+        <div class="creator-services">
+          <div class="creator-services-intro">I build custom:</div>
+          <ul>
+            <li>Web Apps</li>
+            <li>College Projects</li>
+            <li>Business Websites</li>
+            <li>Real-time Applications</li>
+            <li>Creative Surprise Experiences</li>
+          </ul>
+        </div>
+        
+        <div class="creator-tagline">Available for freelance collaborations & custom builds.</div>
+        
+        <div class="creator-links">
+          <a href="https://www.instagram.com/___nithish__rss?igsh=em9xMTBjM2lvbXNn" target="_blank" rel="noopener noreferrer" class="creator-link" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="mailto:nithishsss17@gmail.com" class="creator-link" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
   
