@@ -140,6 +140,82 @@
     .share-link {
       margin-top: 1.5rem;
     }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .timeline {
+        padding-left: 1.25rem;
+        margin: 1.5rem 0;
+      }
+      
+      .timeline-item {
+        padding-left: 1.25rem;
+      }
+      
+      .proposal-info {
+        padding: 1.25rem;
+      }
+      
+      .proposal-info h3 {
+        font-size: 1.25rem;
+      }
+      
+      .accepted-icon {
+        font-size: 4rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .timeline {
+        padding-left: 1rem;
+        margin: 1rem 0;
+      }
+      
+      .timeline-item {
+        padding: 0.75rem 0;
+        padding-left: 1rem;
+      }
+      
+      .timeline-item::before {
+        left: -1.45rem;
+        width: 10px;
+        height: 10px;
+      }
+      
+      .timeline-label {
+        font-size: 0.95rem;
+      }
+      
+      .timeline-time {
+        font-size: 0.75rem;
+      }
+      
+      .proposal-info {
+        padding: 1rem;
+        border-radius: 10px;
+        margin-bottom: 1.5rem;
+      }
+      
+      .proposal-info h3 {
+        font-size: 1.1rem;
+      }
+      
+      .proposal-names {
+        font-size: 0.9rem;
+      }
+      
+      .accepted-message {
+        padding: 1.5rem;
+      }
+      
+      .accepted-icon {
+        font-size: 3.5rem;
+      }
+      
+      .waiting-animation {
+        font-size: 0.9rem;
+      }
+    }
   </style>
 </head>
 <body class="theme-tracking">

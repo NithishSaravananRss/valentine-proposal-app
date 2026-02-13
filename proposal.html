@@ -89,6 +89,51 @@
       font-size: 1.25rem;
       color: var(--text-muted);
     }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .proposal-container {
+        padding: 1.5rem;
+      }
+      
+      .from-text {
+        font-size: 1.25rem;
+      }
+      
+      .no-button-container {
+        width: 180px;
+        height: 55px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .proposal-container {
+        padding: 1rem;
+        min-height: 100svh;
+      }
+      
+      .intro-text {
+        font-size: 1.1rem;
+      }
+      
+      .from-text {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      .no-button-container {
+        width: 160px;
+        height: 50px;
+      }
+      
+      .loading-heart {
+        font-size: 3rem;
+      }
+      
+      .loading-text {
+        font-size: 1.1rem;
+      }
+    }
   </style>
 </head>
 <body class="theme-male">

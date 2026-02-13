@@ -197,9 +197,163 @@
       margin-bottom: 1.5rem;
     }
     
+    /* Tablet breakpoint */
+    @media (max-width: 768px) {
+      .celebration-container {
+        padding: 1.5rem;
+      }
+      
+      .glass-card-celebration {
+        padding: 2rem 1.5rem;
+        border-radius: 24px;
+      }
+      
+      .celebration-title {
+        font-size: clamp(1.75rem, 5vw, 3rem);
+      }
+      
+      .name {
+        font-size: clamp(2rem, 7vw, 3.5rem);
+      }
+      
+      .heart-divider {
+        font-size: clamp(1.5rem, 5vw, 3rem);
+        margin: 0 0.5rem;
+      }
+      
+      .celebration-message {
+        font-size: 1.1rem;
+        padding: 0 0.5rem;
+      }
+      
+      .share-title {
+        font-size: 1.25rem;
+      }
+      
+      .share-btn {
+        padding: 0.875rem 1rem;
+        font-size: 0.9rem;
+      }
+    }
+    
+    /* Mobile breakpoint */
     @media (max-width: 480px) {
+      .celebration-container {
+        padding: 1rem;
+        padding-top: env(safe-area-inset-top, 1rem);
+        padding-bottom: env(safe-area-inset-bottom, 1rem);
+      }
+      
+      .glass-card-celebration {
+        padding: 1.5rem 1.25rem;
+        border-radius: 20px;
+      }
+      
+      .names-container {
+        margin: 1.5rem 0;
+      }
+      
+      .name {
+        font-size: clamp(1.75rem, 9vw, 2.5rem);
+        display: block;
+      }
+      
+      .heart-divider {
+        display: block;
+        margin: 0.5rem 0;
+        font-size: clamp(1.5rem, 6vw, 2rem);
+      }
+      
+      .celebration-message {
+        font-size: 1rem;
+        margin: 1.5rem 0;
+      }
+      
+      .celebration-date {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+      }
+      
+      .share-section {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+      }
+      
       .share-buttons {
         grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
+      
+      .share-btn {
+        padding: 1rem;
+        min-height: 48px;
+      }
+      
+      .share-btn-screenshot {
+        grid-column: span 1;
+      }
+      
+      .btn-share {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+      }
+    }
+    
+    /* Very small screens */
+    @media (max-width: 360px) {
+      .glass-card-celebration {
+        padding: 1.25rem 1rem;
+      }
+      
+      .celebration-title {
+        font-size: 1.5rem;
+      }
+      
+      .name {
+        font-size: 1.5rem;
+      }
+      
+      .share-title {
+        font-size: 1.1rem;
+      }
+    }
+    
+    /* Landscape mobile */
+    @media (max-height: 500px) and (orientation: landscape) {
+      .celebration-container {
+        min-height: auto;
+        padding: 1rem 1.5rem;
+      }
+      
+      .glass-card-celebration {
+        padding: 1.5rem;
+        max-width: 700px;
+      }
+      
+      .names-container {
+        margin: 1rem 0;
+      }
+      
+      .name {
+        display: inline-block;
+        font-size: 2rem;
+      }
+      
+      .heart-divider {
+        display: inline-block;
+        margin: 0 0.75rem;
+      }
+      
+      .celebration-message {
+        margin: 1rem 0;
+      }
+      
+      .share-buttons {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .share-btn-screenshot {
+        grid-column: span 2;
       }
     }
     
@@ -250,12 +404,6 @@
       grid-column: span 2;
       padding: 1.25rem;
       font-size: 1rem;
-    }
-    
-    @media (max-width: 480px) {
-      .share-btn-screenshot {
-        grid-column: span 1;
-      }
     }
     
     .share-btn-icon {

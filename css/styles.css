@@ -591,37 +591,302 @@ body {
   display: block;
 }
 
-/* Responsive Design */
+/* Responsive Design - Mobile First */
+
+/* Large tablets and small desktops */
+@media (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+  
+  .glass-card {
+    max-width: 450px;
+    padding: 2.5rem;
+  }
+}
+
+/* Tablets */
 @media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  
   .app-container {
-    padding: 1rem;
+    padding: 1.5rem;
+    min-height: 100svh; /* Use small viewport height for mobile browsers */
   }
   
   .glass-card {
     padding: 2rem 1.5rem;
     border-radius: 20px;
+    max-width: 100%;
   }
   
+  /* Typography adjustments */
+  .main-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  
+  .subtitle {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+  }
+  
+  /* Form layout changes */
   .gender-select {
     flex-direction: column;
+    gap: 0.75rem;
   }
   
+  .gender-option {
+    padding: 1rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+  
+  .form-input {
+    padding: 0.875rem 1rem;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  /* Proposal adjustments */
   .proposal-buttons {
     width: 100%;
   }
   
   .btn-yes {
     width: 100%;
+    padding: 1rem 2rem;
+  }
+  
+  .btn-no {
+    min-width: auto;
+    padding: 0.75rem 1.5rem;
+  }
+  
+  /* Names display */
+  .names-display {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+  }
+  
+  /* Audio overlay */
+  .tap-icon {
+    font-size: 3.5rem;
+  }
+  
+  .tap-text {
+    font-size: 1.1rem;
+  }
+  
+  /* Tracking page adjustments */
+  .tracking-info {
+    padding: 1.25rem;
+  }
+  
+  .link-url {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .link-url input {
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  
+  .btn-copy {
+    width: 100%;
+    padding: 0.75rem;
   }
 }
 
+/* Mobile phones */
 @media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .app-container {
+    padding: 1rem;
+    padding-top: env(safe-area-inset-top, 1rem);
+    padding-bottom: env(safe-area-inset-bottom, 1rem);
+  }
+  
   .glass-card {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 1.25rem;
+    border-radius: 16px;
+  }
+  
+  /* Typography for small screens */
+  .main-title {
+    font-size: clamp(1.75rem, 7vw, 2.5rem);
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    font-size: clamp(0.85rem, 3.5vw, 1rem);
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Button adjustments */
+  .btn {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+    min-height: 48px; /* Touch target minimum */
+  }
+  
+  .btn-yes {
+    font-size: 1.1rem;
+    padding: 1rem 1.5rem;
+  }
+  
+  .btn-no {
+    font-size: 0.9rem;
+    padding: 0.625rem 1.25rem;
+    min-height: 44px;
+  }
+  
+  /* Form inputs - larger touch targets */
+  .form-input {
+    padding: 1rem;
+    font-size: 16px;
+    min-height: 50px;
+  }
+  
+  .form-textarea {
+    min-height: 100px;
+  }
+  
+  /* Gender selection */
+  .gender-option {
+    padding: 0.875rem;
+  }
+  
+  .gender-icon {
+    font-size: 1.5rem;
+  }
+  
+  .gender-label {
+    font-size: 0.9rem;
+  }
+  
+  /* Partner name display */
+  .partner-name {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+  
+  .proposal-text {
+    font-size: clamp(1.25rem, 5vw, 1.75rem);
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Tracking page */
+  .tracking-title {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+  
+  .info-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .info-label {
+    font-size: 0.8rem;
+  }
+  
+  .info-value {
+    font-size: 0.95rem;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .app-container {
+    padding: 0.75rem;
+  }
+  
+  .glass-card {
+    padding: 1.25rem 1rem;
+    border-radius: 14px;
+  }
+  
+  .main-title {
+    font-size: 1.5rem;
   }
   
   .btn {
-    padding: 0.875rem 1.5rem;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+  }
+  
+  .gender-option {
+    padding: 0.75rem;
+  }
+  
+  .gender-icon {
+    font-size: 1.25rem;
+  }
+}
+
+/* Landscape orientation on mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .app-container {
+    padding: 0.75rem 1.5rem;
+    min-height: auto;
+  }
+  
+  .glass-card {
+    padding: 1.5rem;
+    max-width: 600px;
+  }
+  
+  .main-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group {
+    margin-bottom: 0.75rem;
+  }
+  
+  .gender-select {
+    flex-direction: row;
+  }
+  
+  .audio-overlay {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .tap-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .glass-card {
+    border-width: 0.5px;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .heart-icon {
+    animation: none;
   }
 }
 
